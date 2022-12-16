@@ -1,0 +1,14 @@
+syntax = "proto3";
+package communication;
+
+option go_package = "./engine";
+
+message Request {
+    int32 sequence = 1;
+    string payload = 2;
+}
+
+message Response {
+    int32 sequence = 1;
+    bool isprocessed = 2;
+}
